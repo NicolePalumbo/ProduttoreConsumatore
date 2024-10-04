@@ -24,7 +24,7 @@ public class ProducerConsumer {
 			try {
                 while (currentValue <= X) {
                 	buffer.produce(value++);
-                    Thread.sleep(X);  // Aspetta 120 ms
+                    Thread.sleep(X);  // Aspetta X ms
                     currentValue++;     // Incrementa il contatore
                     System.out.println(Thread.currentThread().getName() + " stampa " + currentValue);
                 }
@@ -60,7 +60,7 @@ public class ProducerConsumer {
 	
 	
 	public static void main (String[] args) {
-		 	Scanner scanner = new Scanner(System.in);
+		 Scanner scanner = new Scanner(System.in);
 	        System.out.print("Inserisci il numero di thread (T): ");
 	        int T = scanner.nextInt();
 	        System.out.print("Inserisci il valore massimo N: ");
@@ -80,6 +80,7 @@ public class ProducerConsumer {
 	
 	
 	public class baffer {
+		
 		private Queue<Integer> queueInterface = new LinkedList<>();
 	    private int capacity;
 
